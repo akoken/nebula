@@ -9,4 +9,4 @@ ADD /src /app
 
 RUN pip3 install requests
 
-CMD ["python", "app.py"]
+ENTRYPOINT python app.py
