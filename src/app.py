@@ -1,5 +1,5 @@
 '''
-This is an application which sends Slack notification when IMAX cinema
+This is an application which sends Slack notification when IMAX ticket sale is available for a movie.
 '''
 import json
 import requests
