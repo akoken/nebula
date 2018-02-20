@@ -5,7 +5,7 @@ ENV MOVIE_URL <MOVIE_URL>
 ENV SLACK_WEBHOOK_URL <slack webhook url>
 WORKDIR /app
 
-ADD . /app
+ADD /src /app
 
 RUN pip3 install requests
 
