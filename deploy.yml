@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: nebula-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nebula
+  template:
+    metadata:
+      labels:
+        app: nebula
+    spec:
+      containers:
+        - name: nebula-pod
+          image: akoken/nebula:latest
+          env:
+            - name: SLACK_WEBHOOK_URL
+              value: 'https://hooks.slack.com/services/hjsa64jnVTFkLDJ4kbRLoU9'
+            - name: MOVIE_URL
+              value: 'https://www.cinemaximum.com.tr/avengers-sonsuzluk-savasi-filmi'
+            - name: MOVIE_NAME
+              value: 'Avengers Sonsuzluk Taşı'
