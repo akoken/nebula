@@ -1,6 +1,7 @@
 '''
 This is an application which sends Slack notification when IMAX ticket sale is available for a movie.
 '''
+import datetime
 import json
 import requests
 import time
@@ -29,7 +30,7 @@ def main():
 
 if __name__ == "__main__":
     while True:
-        print("Started!")
+        print("[INFO] {} requesting web page.".format(datetime.datetime.now()))
         main()
-        print("Finished!")
+        print("[INFO] {} request completed.".format(datetime.datetime.now()))
         time.sleep(60 * 5)
