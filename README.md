@@ -16,7 +16,7 @@ akoken/nebula:latest
 ```
 ## Kubernetes
 
-If you have a Kubernetes cluster, you can also use deploy.yml file to run the application. Please do not forget to update environment variables in yaml file before you run the following command.
+If you have a Kubernetes cluster, you can also use deploy.yml file to run the application. You just need to update environment variables in yaml file before you run the following command:
 
 ```
 kubectl create -f deploy.yml
