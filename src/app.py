@@ -13,7 +13,7 @@ def main():
     webhook_url = os.environ['SLACK_WEBHOOK_URL']
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0'}
-    notification = "{} IMAX biletleri satışta!".format(
+    notification = "{} biletleri satışta!".format(
         os.environ['MOVIE_NAME'])
     slack_data = {'text': notification, 'username': 'moviebot'}
 
