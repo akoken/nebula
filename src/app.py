@@ -18,9 +18,14 @@ def main():
     slack_data = {'text': notification, 'username': 'moviebot'}
 
     url = os.environ['MOVIE_URL']
+    searchKeyword = "IMAX"
+
+    if("biletix" in url)
+        searchKeyword = "Bilet Ara"
+
     html = requests.get(url, headers=headers).text
     global notificationSent
-    if "IMAX" in html and notificationSent == False:
+    if searchKeyword in html and notificationSent == False:
         response = requests.post(webhook_url, data=json.dumps(
             slack_data), headers={'Content-Type': 'application/json'})
 
