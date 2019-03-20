@@ -20,7 +20,7 @@ def main():
     url = os.environ['MOVIE_URL']
     searchKeyword = "IMAX"
 
-    if("biletix" in url)
+    if("biletix" in url):
         searchKeyword = "Bilet Ara"
 
     html = requests.get(url, headers=headers).text
